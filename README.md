@@ -5,6 +5,18 @@
 ## Description
 * This is a web app for individuals looking to rescue a shelter dog find their perfect match. The user creates a profile of their personality and lifestyle and is then shown local shelter dogs that match based on their breed and personality. I am creating this app because I am passionate about helping shelter animals find forever loving homes. I would love to help those seeking to bring a rescue dog into their lives find the perfect match for them and their family. 
 
+
+## Minimum Viable Product
+* The user can see shelter dogs in their area
+* The user can 
+* The user can
+
+## Goals
+* The user can
+* The user can
+* The user can
+
+
 ## Technologies Used
 * React
 * Redux
