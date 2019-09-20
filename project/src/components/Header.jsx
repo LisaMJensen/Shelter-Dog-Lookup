@@ -1,5 +1,5 @@
 import React from 'react';
-import placehholderLogo from '../assets/images/placeholderLogo.png';
+import placeholderLogo from '../assets/images/placeholderLogo.png';
 
 function Header() {
     return (
