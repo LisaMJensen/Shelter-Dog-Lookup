@@ -1,6 +1,6 @@
 # Shelter Dog Lookup (Placeholder Name) :dog2:
 ### By: Lisa Jensen
-----
+--
 
 ## Description
 * This is a web app for individuals looking to rescue a shelter dog find their perfect match. The user creates a profile of their personality and lifestyle and is then shown local shelter dogs that match based on their breed and personality. I am creating this app because I am passionate about helping shelter animals find forever loving homes. I would love to help those seeking to bring a rescue dog into their lives find the perfect match for them and their family. 
@@ -16,10 +16,6 @@
 * Bootstrap
 * Amazon Web Services for Hosting
 
-
-
-
-<!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -86,4 +82,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 ### `npm run build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify -->
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
