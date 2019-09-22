@@ -13,19 +13,19 @@ import {
 function Header() {
     return (
         <div>
-                <Navbar color="light" light expand="md">
+            <Navbar color="primary" dark expand="md">
                 <NavbarBrand href="/"><h3><img src={placeholderLogo} alt="placeholder dog logo" />
                     Placeholder Name</h3></NavbarBrand>
-                    <Nav className="ml-auto" navbar>
-                        <NavItem>
-                            <NavLink href="/components/">Components</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-                        </NavItem>
-                    </Nav>
-                </Navbar>
-            
+                <Nav className="ml-auto" navbar>
+                    <NavItem>
+                        <NavLink href="#">Profile</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="#">Login</NavLink>
+                    </NavItem>
+                </Nav>
+            </Navbar>
+
         </div>
     );
 }
