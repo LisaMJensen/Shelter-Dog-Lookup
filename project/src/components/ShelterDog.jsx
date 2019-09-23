@@ -12,50 +12,50 @@ function ShelterDog() {
     return (
         <div>
             <Container>
-            <Row>
-                <div class="dogCard">
-                    <Col sm={{ size: 'auto', offset: 1 }}>
-                    <Card top className="h-300">
-                        <CardBody>
-                            <CardImg style={{ width: "150px", height: 'auto' }} src={placeholderDogImage} alt="placeholder dog image" />
-                            <CardTitle style={{ backgroundColor: '#007bff', color: 'white', padding: '5px' }}><h3 class="dogName">Roland</h3></CardTitle>
-                            <CardSubtitle>Dog Breed - Dog Age</CardSubtitle>
-                            -Dog picture
-                            -Dog location
+                <Row>
+                    <div class="dogCard">
+                        <Col sm={{ size: 'auto', offset: 1 }}>
+                            <Card top className="h-300">
+                                <CardBody>
+                                    <CardImg style={{ width: 'auto', height: '200px' }} src={placeholderDogImage} alt="placeholder dog image" />
+                                    <CardTitle style={{ backgroundColor: '#007bff', color: 'white', padding: '5px' }}><h3 class="dogName">Roland</h3></CardTitle>
+                                    <CardSubtitle>Dog Breed - Dog Age</CardSubtitle>
+                                    -Dog picture
+                                    -Dog location
                     </CardBody>
-                    </Card>
-                    </Col>
-                </div>
+                            </Card>
+                        </Col>
+                    </div>
 
-                <div class="dogCard">
-                    <Col sm={{ size: 'auto', offset: 1 }}>
-                    <Card top className="h-300">
-                        <CardBody>
-                            <CardImg style={{ width: "150px", height: 'auto' }} src={placeholderDogImage2} alt="placeholder dog image" />
-                            <CardTitle style={{ backgroundColor: '#007bff', color: 'white', padding: '5px' }}><h3 class="dogName">McTavish</h3></CardTitle>
-                            <CardSubtitle>Dog Breed - Dog Age</CardSubtitle>
-                            -Dog picture
-                            -Dog location
+                    <div class="dogCard">
+                        <Col sm={{ size: 'auto', offset: 1 }}>
+                            <Card top className="h-300">
+                                <CardBody>
+                                    <CardImg style={{ width: 'auto', height: '200px' }} src={placeholderDogImage2} alt="placeholder dog image" />
+                                    <CardTitle style={{ backgroundColor: '#007bff', color: 'white', padding: '5px' }}><h3 class="dogName">McTavish</h3></CardTitle>
+                                    <CardSubtitle>Dog Breed - Dog Age</CardSubtitle>
+                                    -Dog picture
+                                    -Dog location
                     </CardBody>
-                    </Card>
-                    </Col>
-                </div>
+                            </Card>
+                        </Col>
+                    </div>
 
-                <div class="dogCard">
-                    <Col sm={{ size: 'auto', offset: 1 }}>
-                    <Card top className="h-300">
-                        <CardBody>
-                            <CardImg style={{ width: "150px", height: 'auto' }} src={placeholderDogImage3} alt="placeholder dog image" />
-                            <CardTitle style={{ backgroundColor: '#007bff', color: 'white', padding: '5px' }}><h3 class="dogName">Georgia</h3></CardTitle>
-                            <CardSubtitle>Dog Breed - Dog Age</CardSubtitle>
-                            -Dog picture
-                            -Dog location
+                    <div class="dogCard">
+                        <Col sm={{ size: 'auto', offset: 1 }}>
+                            <Card top className="h-300">
+                                <CardBody>
+                                    <CardImg style={{ width: 'auto', height: '200px' }} src={placeholderDogImage3} alt="placeholder dog image" />
+                                    <CardTitle style={{ backgroundColor: '#007bff', color: 'white', padding: '5px' }}><h3 class="dogName">Georgia</h3></CardTitle>
+                                    <CardSubtitle>Dog Breed - Dog Age</CardSubtitle>
+                                    -Dog picture
+                                    -Dog location
                     </CardBody>
-                    </Card>
-                    </Col>
-                </div>
+                            </Card>
+                        </Col>
+                    </div>
 
-                {/* <div class="dogCard">
+                    {/* <div class="dogCard">
                     <Col sm={{ size: 'auto', offset: 1 }}>
                             <Card top className="h-300">
                         <CardBody>
@@ -69,7 +69,7 @@ function ShelterDog() {
                     </Card>
                     </Col>
                 </div> */}
-            </Row>
+                </Row>
 
                 {/* <div class="dogCard">
                     <Col sm={{ size: 'auto', offset: 1 }}>
@@ -87,5 +87,7 @@ function ShelterDog() {
         </div>
     )
 }
+ShelterDog.propTypes = {
+};
 
 export default ShelterDog;
