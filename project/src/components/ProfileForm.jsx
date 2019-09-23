@@ -25,45 +25,33 @@ function ProfileForm(props) {
         `}</style>
             <form>
                 <input
-                    name="isGoing"
-                    type="checkbox"
-                    checked={this.state.isGoing}
-                    onChange={this.handleInputChange} />
+                    name=""
+                    type="checkbox" />
                 <br></br>
                 <br></br>
                 <input
-                    name="isGoing"
-                    type="checkbox"
-                    checked={this.state.isGoing}
-                    onChange={this.handleInputChange} />
+                    name=""
+                    type="checkbox" />
                 <br></br>
                 <br></br>
                 <input
-                    name="isGoing"
-                    type="checkbox"
-                    checked={this.state.isGoing}
-                    onChange={this.handleInputChange} />
+                    name=""
+                    type="checkbox" />
                 <br></br>
                 <br></br>
                 <input
-                    name="isGoing"
-                    type="checkbox"
-                    checked={this.state.isGoing}
-                    onChange={this.handleInputChange} />
+                    name=""
+                    type="checkbox" />
                 <br></br>
                 <br></br>
                 <input
-                    name="isGoing"
-                    type="checkbox"
-                    checked={this.state.isGoing}
-                    onChange={this.handleInputChange} />
+                    name=""
+                    type="checkbox" />
                 <br></br>
                 <br></br>
                 <input
-                    name="isGoing"
-                    type="checkbox"
-                    checked={this.state.isGoing}
-                    onChange={this.handleInputChange} />
+                    name=""
+                    type="checkbox" />
                 <br></br>
                 <br></br>
                 <button variant="primary" type='submit'>Set Tags</button>
