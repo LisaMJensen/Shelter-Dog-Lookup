@@ -20,7 +20,6 @@ function ShelterDog() {
                                     <CardImg style={{ width: 'auto', height: '200px' }} src={placeholderDogImage} alt="placeholder dog image" />
                                     <CardTitle style={{ backgroundColor: '#007bff', color: 'white', padding: '5px' }}><h3 class="dogName">Roland</h3></CardTitle>
                                     <CardSubtitle>Dog Breed - Dog Age</CardSubtitle>
-                                    -Dog picture
                                     -Dog location
                     </CardBody>
                             </Card>
@@ -34,7 +33,7 @@ function ShelterDog() {
                                     <CardImg style={{ width: 'auto', height: '200px' }} src={placeholderDogImage2} alt="placeholder dog image" />
                                     <CardTitle style={{ backgroundColor: '#007bff', color: 'white', padding: '5px' }}><h3 class="dogName">McTavish</h3></CardTitle>
                                     <CardSubtitle>Dog Breed - Dog Age</CardSubtitle>
-                                    -Dog picture
+    
                                     -Dog location
                     </CardBody>
                             </Card>
@@ -48,7 +47,7 @@ function ShelterDog() {
                                     <CardImg style={{ width: 'auto', height: '200px' }} src={placeholderDogImage3} alt="placeholder dog image" />
                                     <CardTitle style={{ backgroundColor: '#007bff', color: 'white', padding: '5px' }}><h3 class="dogName">Georgia</h3></CardTitle>
                                     <CardSubtitle>Dog Breed - Dog Age</CardSubtitle>
-                                    -Dog picture
+    
                                     -Dog location
                     </CardBody>
                             </Card>
@@ -63,7 +62,6 @@ function ShelterDog() {
                                         <CardTitle style={{ backgroundColor: '#007bff', color: 'white', padding: '5px' }}><h3 class="dogName">Dundie</h3></CardTitle>
                             </div>
                             <CardSubtitle>Dog Breed - Dog Age</CardSubtitle>
-                            -Dog picture
                             -Dog location
                     </CardBody>
                     </Card>
@@ -77,7 +75,6 @@ function ShelterDog() {
                         <CardBody>
                             <CardTitle inverse style={{ backgroundColor: '#007bff', backgroundSize: '200px', color: 'white', padding: '5px' }}><h3 class="dogName">Caroline</h3></CardTitle>
                             <CardSubtitle>Dog Breed - Dog Age</CardSubtitle>
-                            -Dog picture
                             -Dog location
                     </CardBody>
                     </Card>

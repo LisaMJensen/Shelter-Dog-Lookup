@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../assets/styles/Header.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import placeholderLogo from '../assets/images/placeholderLogo.png';
@@ -18,7 +19,7 @@ function Header() {
                     Placeholder Name</h3></NavbarBrand>
                 <Nav className="ml-auto" navbar>
                     <NavItem>
-                        <NavLink href="#">Profile</NavLink>
+                        <p><Link to="/profileform">Profile</Link></p>
                     </NavItem>
                     <NavItem>
                         <NavLink href="#">Login</NavLink>
