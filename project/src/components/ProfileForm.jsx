@@ -16,39 +16,43 @@ function ProfileForm(props) {
 
     return (
         <div>
-            <style jsx>{`
-          div {
-                margin: 50px;
-               }
-
-
-        `}</style>
+            <h2>Lifestyle/Personality Profile</h2>
+            <br></br>
+            <h4>Select the traits that best match you</h4>
+            <br></br>
+            <br></br>
             <form>
+                <label>Active</label>
                 <input
                     name=""
                     type="checkbox" />
                 <br></br>
                 <br></br>
+                <label>Playful</label>
                 <input
                     name=""
                     type="checkbox" />
                 <br></br>
                 <br></br>
+                <label>Laid back</label>
                 <input
                     name=""
                     type="checkbox" />
                 <br></br>
                 <br></br>
+                <label>Affectionate</label>
                 <input
                     name=""
                     type="checkbox" />
                 <br></br>
                 <br></br>
+                <label>Trainable</label>
                 <input
                     name=""
                     type="checkbox" />
                 <br></br>
                 <br></br>
+                <label>Clean</label>
                 <input
                     name=""
                     type="checkbox" />
