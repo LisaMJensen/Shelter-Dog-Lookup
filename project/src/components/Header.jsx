@@ -19,7 +19,7 @@ function Header() {
                     Placeholder Name</h3></NavbarBrand>
                 <Nav className="ml-auto" navbar>
                     <NavItem>
-                        <p><Link to="/profileform">Profile</Link></p>
+                        <p><NavLink to="/profileform">Profile</NavLink></p>
                     </NavItem>
                     <NavItem>
                         <NavLink href="#">Login</NavLink>

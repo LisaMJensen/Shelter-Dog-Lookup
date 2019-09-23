@@ -15,10 +15,10 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <Switch>
+          <Route exact path='/' component={ShelterDog}/>
           <Route path="/profileform" component={ProfileForm} />
           <Route component={Error404} />
         </Switch>
-        <ShelterDog />
         <Footer />
       </div>
     );
