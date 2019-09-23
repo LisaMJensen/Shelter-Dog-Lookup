@@ -1,6 +1,6 @@
 .dogCard {
     height: 200px;
-    width: 200px;
+    width: 300px;
     margin-top: 20px;
     margin-left: 20px;
     
@@ -8,13 +8,17 @@
 
 .dogCard:hover {
     height: 200px;
-    width: 200px;
+    width: 300px;
     margin-top: 20px;
     margin-left: 20px;
-    background-color: royalblue;
+    opacity: 0.5;
 }
 
 .dogName {
     background-size: 100%;
     font-family: 'Fredoka One', cursive; /* Title font or default font? */
 }
+
+
+
+
