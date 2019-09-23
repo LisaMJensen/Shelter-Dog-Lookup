@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import 'bootstrap/dist/css/bootstrap.css';
+import {Button} from 'reactstrap';
 
 function ProfileForm(props) {
 
@@ -58,7 +60,7 @@ function ProfileForm(props) {
                     type="checkbox" />
                 <br></br>
                 <br></br>
-                <button variant="primary" type='submit'>Set Tags</button>
+                <Button color="primary" type='submit'>Set Tags</Button>
             </form>
         </div>
     );
