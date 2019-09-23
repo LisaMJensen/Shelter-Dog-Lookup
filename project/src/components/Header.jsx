@@ -14,7 +14,7 @@ function Header() {
     return (
         <div>
             <Navbar color="primary" dark expand="md">
-                <NavbarBrand href="/"><h3><img src={placeholderLogo} alt="placeholder dog logo" />
+                <NavbarBrand href="/"><h3 class="headerName"><img src={placeholderLogo} alt="placeholder dog logo" />
                     Placeholder Name</h3></NavbarBrand>
                 <Nav className="ml-auto" navbar>
                     <NavItem>
