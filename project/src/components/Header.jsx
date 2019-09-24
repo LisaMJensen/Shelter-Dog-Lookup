@@ -19,7 +19,8 @@ import {
     Form,
     FormGroup,
     Label,
-    Input
+    Input,
+    Row
 } from 'reactstrap';
 
 class Header extends React.Component {
@@ -55,20 +56,27 @@ class Header extends React.Component {
                                 <DropdownMenu right>
                                     <div class="navbarLogin">
                                         <Form inline>
-                                            <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                                                <Label for="exampleEmail" className="mr-sm-2">Email</Label>
-                                                <Input type="email" name="email" id="exampleEmail" placeholder="Email" />
+                                            <FormGroup >
+                                                
+                                                    <Label for="Email" className="mr-sm-2">Email</Label>
+                                                    <Input type="email" name="email" id="Email" placeholder="Email" />
+                                                
                                             </FormGroup>
                                             <DropdownItem divider />
-                                            <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                                                <Label for="examplePassword" className="mr-sm-2">Password</Label>
-                                                <Input type="password" name="password" id="examplePassword" placeholder="Password" />
+                                            <FormGroup >
+                                                
+                                                    <Label for="Password" className="mr-sm-2">Password</Label>
+                                                    <Input type="password" name="password" id="Password" placeholder="Password" />
+                                                
                                             </FormGroup>
-                                            <Button>Login</Button>
+                                            
+                                                <Button color="primary">Login</Button>
+                                            
                                         </Form>
                                     </div>
                                     <NavItem>
-                                        Not a Member?<NavLink href="/#/login"><h6 className="createAccountLink">Create an Account</h6></NavLink>
+                                        <Row style={{ fontSize: '12px', marginLeft: '20px' }}>
+                                            Not a Member?<NavLink href="/#/login"><h6 className="createAccountLink"> Create an Account</h6></NavLink></Row>
                                     </NavItem>
                                 </DropdownMenu>
                             </UncontrolledDropdown>
