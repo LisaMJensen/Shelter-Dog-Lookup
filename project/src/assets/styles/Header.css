@@ -16,6 +16,7 @@
     padding-left: 60px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     display: block;
     width: 350px;
     height: 200px;

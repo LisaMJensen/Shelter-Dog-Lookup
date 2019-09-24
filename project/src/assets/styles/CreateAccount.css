@@ -1,0 +1,15 @@
+.createAccount {
+  display: block;
+  text-align: center;
+  padding: 50px; 
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+
+Form
+{
+    display: inline-block;
+    text-align: left;
+    
+}

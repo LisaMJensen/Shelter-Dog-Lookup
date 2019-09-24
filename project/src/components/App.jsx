@@ -5,7 +5,7 @@ import Footer from './Footer';
 import ShelterDog from './ShelterDog';
 import { Switch, Route } from 'react-router-dom';
 import ProfileForm from './ProfileForm';
-import Login from './Login';
+import CreateAccount from './CreateAccount';
 import Error404 from './Error404';
 import './App.css';
 
@@ -17,7 +17,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' component={ShelterDog} />
           <Route path="/profileform" component={ProfileForm} />
-          <Route path="/login" component={Login} />
+          <Route path="/createaccount" component={CreateAccount} />
           <Route component={Error404} />
         </Switch>
         <Footer />

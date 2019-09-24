@@ -57,26 +57,26 @@ class Header extends React.Component {
                                     <div class="navbarLogin">
                                         <Form inline>
                                             <FormGroup >
-                                                
-                                                    <Label for="Email" className="mr-sm-2">Email</Label>
-                                                    <Input type="email" name="email" id="Email" placeholder="Email" />
-                                                
+
+
+                                                <Input type="email" name="email" id="Email" placeholder="Email" />
+
                                             </FormGroup>
                                             <DropdownItem divider />
                                             <FormGroup >
-                                                
-                                                    <Label for="Password" className="mr-sm-2">Password</Label>
-                                                    <Input type="password" name="password" id="Password" placeholder="Password" />
-                                                
+
+
+                                                <Input type="password" name="password" id="Password" placeholder="Password" />
+
                                             </FormGroup>
-                                            
-                                                <Button color="primary">Login</Button>
-                                            
+
+                                            <Button color="primary">Login</Button>
+
                                         </Form>
                                     </div>
                                     <NavItem>
                                         <Row style={{ fontSize: '12px', marginLeft: '20px' }}>
-                                            Not a Member?<NavLink href="/#/login"><h6 className="createAccountLink"> Create an Account</h6></NavLink></Row>
+                                            Not a Member?<NavLink href="/#/createaccount"><h6 className="createAccountLink"> Create an Account</h6></NavLink></Row>
                                     </NavItem>
                                 </DropdownMenu>
                             </UncontrolledDropdown>
