@@ -3,6 +3,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 import '../assets/styles/CreateAccount.css';
 import { Button, Form, FormGroup, Label, Input, FormText, Col } from 'reactstrap';
 
+
+//Make modal?
+
 function CreateAccount(props) {
     return (
         <div class="createAccount">

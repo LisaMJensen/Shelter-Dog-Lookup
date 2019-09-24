@@ -23,6 +23,7 @@ import {
     Row
 } from 'reactstrap';
 
+
 class Header extends React.Component {
     constructor(props) {
         super(props);
@@ -54,6 +55,9 @@ class Header extends React.Component {
                                     Login
                 </DropdownToggle>
                                 <DropdownMenu right>
+
+                                {/* Should this login form be separate from Header page? */}
+
                                     <div class="navbarLogin">
                                         <Form inline>
                                             <FormGroup >
