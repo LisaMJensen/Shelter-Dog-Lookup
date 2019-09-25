@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '.././logo.svg';
 import Header from './Header';
 import Footer from './Footer';
+import APICall from './apiCall';
 import ShelterDog from './ShelterDog';
 import { Switch, Route } from 'react-router-dom';
 import ProfileForm from './ProfileForm';
@@ -20,6 +21,7 @@ class App extends React.Component {
           <Route path="/createaccount" component={CreateAccount} />
           <Route component={Error404} />
         </Switch>
+        <APICall />
         <Footer />
       </div>
     );

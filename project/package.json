@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@petfinder/petfinder-js": "^1.0.6",
     "bootstrap": "^4.3.1",
     "file-loader": "^4.2.0",
     "firebase": "^6.6.2",
@@ -27,6 +28,7 @@
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "dotenv-webpack": "^1.7.0",
     "gh-pages": "^1.2.0"
   },
   "browserslist": [
