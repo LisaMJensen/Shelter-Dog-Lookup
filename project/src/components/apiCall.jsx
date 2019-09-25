@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Client } from "@petfinder/petfinder-js";
+require('dotenv').config();
 
 class apiCall extends React.Component {
     constructor() {
@@ -11,9 +12,8 @@ class apiCall extends React.Component {
     }
 
     componentDidMount() {
-
         var petfinder = require("@petfinder/petfinder-js");
-        var client = new petfinder.Client({ apiKey: "process.env.API_KEY", secret: "process.env.SECRET" });
+        var client = new petfinder.Client({ apiKey: process.env.REACT_APP_API_KEY, secret: process.env.REACT_APP_SECRET });
 
         client.animal.search({ type: "Dog", location: "98198" })
             .then(function (response) {
@@ -24,7 +24,7 @@ class apiCall extends React.Component {
             .catch(function (error) {
                 console.log("There was an error");
             });
-        //     var bearer = 'Bearer' + 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNiODVkNWRmZjcwNWQ5NmUyNWIwODE4ZmEyZWI5YTdiMzE0ODkxYzViNWEwNWQyMWVkNTk4MmIwYzg0NDVhN2QyNTUyZDA0NmM2ZTNlN2NmIn0.eyJhdWQiOiJjTjNwcTZRMTF0WVlZZjQycmFPR21mU0NJMFJFdm5Sc29lS2FmNWlXS2p3WnhsWGVnZyIsImp0aSI6ImNiODVkNWRmZjcwNWQ5NmUyNWIwODE4ZmEyZWI5YTdiMzE0ODkxYzViNWEwNWQyMWVkNTk4MmIwYzg0NDVhN2QyNTUyZDA0NmM2ZTNlN2NmIiwiaWF0IjoxNTY5NDQxMDg4LCJuYmYiOjE1Njk0NDEwODgsImV4cCI6MTU2OTQ0NDY4OCwic3ViIjoiIiwic2NvcGVzIjpbXX0.lurewsNeXK_nLPKYv0EMHCTKjJvX1NqGpi00P1Uzns4JZ82uvpsa37OYiLt9BtYeT_asT1Tk5nnIjHZkIjwEG7dR7vyzUsQ-_dL9tlzqETf39hFH1CjE0vLz7nqLERu79QGFHJkqdVb8Lwh-JrFXOt64zxm5Y8ECtaB-INONyS1ejoQkhaWAydIXZ2r0vMYIyEMwZG9x1PFT704xAD6SIUezjTGbsvXzO1-pMs0JCT1PElq2o0GRQtY5ct5yNnKVlKwfYwpyqSTZNU0_I2_gDL99nUQ6Xa-B5O6XjbTGIygFOTA8TEtBqsTgkkfsuAQp7xV0qx45ZIeT5xeTZSzDPQ'
+        //     var bearer = 'Bearer' + 
         //     var obj = {
         //         method: 'POST',
         //         withCredentials: false,

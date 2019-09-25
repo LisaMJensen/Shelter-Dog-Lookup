@@ -10,6 +10,8 @@ import CreateAccount from './CreateAccount';
 import Error404 from './Error404';
 import './App.css';
 
+console.log(process.env.REACT_APP_API_KEY);
+
 class App extends React.Component {
   render() {
     return (
