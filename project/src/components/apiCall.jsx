@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Client } from "@petfinder/petfinder-js";
 require('dotenv').config();
 
@@ -15,9 +14,9 @@ class apiCall extends React.Component {
         var petfinder = require("@petfinder/petfinder-js");
         var client = new petfinder.Client({ apiKey: process.env.REACT_APP_API_KEY, secret: process.env.REACT_APP_SECRET });
 
-        client.animal.search({ type: "Dog", location: "98198" })
+        client.animal.search({ type: "Dog", breed: "poodle", location: "98198", status: "adoptable", limit: "40"  })
             .then(function (response) {
-                console.log(response.data.animals[0].name);
+                console.log(response.data.animals[23].name);
                 console.log(response.data.animals[0].breeds);
                 console.log(response.data.animals[0].age);
             })

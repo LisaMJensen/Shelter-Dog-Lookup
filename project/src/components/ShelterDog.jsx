@@ -1,12 +1,11 @@
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import placeholderDogImage from '../assets/images/placeholderDogImage.jpeg';
 import placeholderDogImage2 from '../assets/images/placeholderDogImage2.jpg';
 import placeholderDogImage3 from '../assets/images/placeholderDogImage3.jpeg';
 import '../assets/styles/ShelterDog.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Container, Row, Col, Card, CardImg, CardDeck, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
+import { Container, Row, Col, Card, CardImg, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 
 function ShelterDog() {
     return (
