@@ -20,8 +20,8 @@ function ProfileForm(props) {
             <h4>Select the traits that best match you</h4>
             <br></br>
             <br></br>
-            <form onSubmit={handleSetProfileSubmission}>
-                <label>Active</label>
+            <form onSubmit={handleNewProfileFormSubmission}>
+                {/* <label>Active</label>
                 <input
                     name=""
                     type="checkbox" />
@@ -56,10 +56,12 @@ function ProfileForm(props) {
                     name=""
                     type="checkbox" />
                 <br></br>
-                <br></br>
+                <br></br> */}
                 <input
                     name="location"
-                    type="text" />
+                    type="text"
+                    placeholder='Area Code'
+                    ref={(input) => { _location = input; }} />
                 <br></br>
                 <br></br>
                 <Button color="primary" type='submit'>Set Tags</Button>
