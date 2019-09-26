@@ -5,6 +5,14 @@ import {Button} from 'reactstrap';
 
 function ProfileForm(props) {
 
+    let _location = null;
+
+    function handleNewProfileFormSubmission(event) {
+        event.preventDefault();
+        props.onNewProfileTagsCreation({ location: _location.value,});
+        _location.value = '';
+    }
+
     return (
         <div>
             <h2>Lifestyle/Personality Profile</h2>
@@ -12,7 +20,7 @@ function ProfileForm(props) {
             <h4>Select the traits that best match you</h4>
             <br></br>
             <br></br>
-            <form>
+            <form onSubmit={handleSetProfileSubmission}>
                 <label>Active</label>
                 <input
                     name=""
@@ -49,6 +57,11 @@ function ProfileForm(props) {
                     type="checkbox" />
                 <br></br>
                 <br></br>
+                <input
+                    name="location"
+                    type="text" />
+                <br></br>
+                <br></br>
                 <Button color="primary" type='submit'>Set Tags</Button>
             </form>
         </div>
@@ -56,7 +69,7 @@ function ProfileForm(props) {
 }
 
 ProfileForm.propTypes = {
-    onNewKegCreation: PropTypes.func
+    onNewProfileTagsCreation: PropTypes.func
 };
 
 export default ProfileForm;
