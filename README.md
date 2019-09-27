@@ -7,14 +7,30 @@
 
 
 ## Minimum Viable Product
-* The user can see shelter dogs in their area
-* The user can 
-* The user can
+* The user can create an account
+* The user can log in
+* The user can set their location on their profile
+* The user can see shelter dogs in the area of their set location
 
-## Goals
-* The user can
-* The user can
-* The user can
+## Component Structure
+<img src="ComponentRouteStructureDiagram.png"/>
+
+## Additional Goals
+* The user can save desired shelter dogs to a list
+* The user can set personality and liftstyle tags on their profile
+* The user can see matched shelter dogs based on the profile tags they have set
+
+
+## Technologies Used
+* React
+* Redux
+* JavaScript
+* JSX
+* MySQL
+* HTML
+* CSS
+* Bootstrap
+* Amazon Web Services for Hosting
 
 
 ## Technologies Used
