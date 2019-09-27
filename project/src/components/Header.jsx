@@ -44,29 +44,33 @@ class Header extends React.Component {
                                 <ModalHeader toggle={this.toggle} close={closeBtn}></ModalHeader>
                                 <ModalBody toggle={this.toggle} close={closeBtn}>
                                     <h1 class="loginModalLabel">Login</h1>
-                                    <Form inline style={{ padding: '50px', alignContent: 'center'}}>
+                                    <br></br>
+                                    <Form>
+                                
                                 <Container>
                                 <Col>
-                                <Row>
+                               
+                                                    <div class="loginModalForm">
                                                     <FormGroup style={{ fontSize: '12px', leftMargin: '150px', alignContent: 'center', alignItems: 'center' }} >
 
 
                                     <Input type="email" name="email" id="Email" placeholder="Email" />
 
                                 </FormGroup>
-                                </Row>
-                                <br></br>
-                                <Row>
+                                
+                                
+                                
                                                     <FormGroup style={{ fontSize: '12px', leftMargin: '150px', alignContent: 'center', alignItems: 'center' }} >
 
 
                                     <Input type="password" name="password" id="Password" placeholder="Password" />
 
                                 </FormGroup>
-                                                </Row>
+                                </div>
+                                                
                                             </Col>
                                         </Container>
-                                        <Button color="primary" onClick={this.toggle}>Login</Button>{' '}
+                                            <div class='loginModalButton'><Button color="primary" onClick={this.toggle}>Login</Button>{' '}</div>
                             </Form>
                             
                         </ModalBody>
