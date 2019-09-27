@@ -13,7 +13,7 @@
 * The user can see shelter dogs in the area of their set location
 
 ## Component Structure
-<img src="/project/ComponentRouteStructureDiagram.png"/>
+<img src="/project/src/ComponentRouteStructureDiagram.png"/>
 
 ## Additional Goals
 * The user can save desired shelter dogs to a list
