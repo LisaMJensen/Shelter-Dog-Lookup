@@ -24,4 +24,17 @@
 
 .createAccountLink {
     color: black;
+    justify-content: center;
+    margin-left: -120px;
+}
+
+.loginModalLabel {
+    text-align: center;
+}
+.modal-header {
+    border-bottom-color: white !important;
+}
+.modal-footer {
+    justify-content: center  !important;
+    border-top-color: white !important;
 }
