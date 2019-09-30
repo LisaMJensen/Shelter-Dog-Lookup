@@ -7,14 +7,14 @@ require('dotenv').config();
 class ProfileForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { value: '' };
+        this.state = { location: '' };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(event) {
-        this.setState({ value: event.target.value });
+        this.setState({ location: event.target.value });
     }
 
     handleSubmit(event) {
@@ -24,19 +24,20 @@ class ProfileForm extends React.Component {
         var petfinder = require("@petfinder/petfinder-js");
         var client = new petfinder.Client({ apiKey: API_KEY, secret: SECRET });
 
-        client.animal.search({ type: "Dog", breed: "poodle", location: this.state.value, status: "adoptable", limit: "10" })
+        client.animal.search({ type: "Dog", breed: "poodle", location: this.state.location, status: "adoptable", limit: "10" })
             .then(function (response) {
                 for(let i=0; i<=response.data.animals.length; i++) {
                     console.log(response.data.animals[i].name);
                     console.log(response.data.animals[i].breeds);
                     console.log(response.data.animals[i].age);
+                    console.log(response.data.animals[i].photos[0]);
                 }
             })
             .catch(function (error) {
                 console.log("There was an error");
             });
 
-        console.log(this.state.value);
+        console.log(this.state.location);
         event.preventDefault();
 
     }
@@ -90,7 +91,7 @@ class ProfileForm extends React.Component {
                         name="location"
                         type="text"
                         placeholder='Area Code'
-                        value={this.state.value} onChange={this.handleChange} />
+                        value={this.state.location} onChange={this.handleChange} />
                     <br></br>
                     <br></br>
                     <Button color="primary" type="submit" value="Submit">Set Tags</Button>
