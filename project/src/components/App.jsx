@@ -3,7 +3,6 @@ import Header from './Header';
 import Footer from './Footer';
 import APICall from './apiCall';
 import DescriptionPage from './DescriptionPage';
-import loginModal from './Login'
 import ShelterDog from './ShelterDog';
 import { Switch, Route } from 'react-router-dom';
 import ProfileForm from './ProfileForm';
@@ -23,7 +22,7 @@ class App extends React.Component {
           <Route path="/createaccount" component={CreateAccount} />
           <Route component={Error404} />
         </Switch>
-        <APICall />
+        {/* <APICall /> */}
         <Footer />
       </div>
     );

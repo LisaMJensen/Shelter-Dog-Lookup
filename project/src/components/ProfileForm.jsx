@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Button } from 'reactstrap';
+require('dotenv').config();
 
 class ProfileForm extends React.Component {
     constructor(props) {
@@ -17,21 +18,32 @@ class ProfileForm extends React.Component {
     }
 
     handleSubmit(event) {
-        alert(this.state.value);
+
+        const API_KEY = process.env.REACT_APP_API_KEY;
+        const SECRET = process.env.REACT_APP_SECRET;
+        var petfinder = require("@petfinder/petfinder-js");
+        var client = new petfinder.Client({ apiKey: API_KEY, secret: SECRET });
+
+        client.animal.search({ type: "Dog", breed: "poodle", location: this.state.value, status: "adoptable", limit: "10" })
+            .then(function (response) {
+                for(let i=0; i<=response.data.animals.length; i++) {
+                    console.log(response.data.animals[i].name);
+                    console.log(response.data.animals[i].breeds);
+                    console.log(response.data.animals[i].age);
+                }
+            })
+            .catch(function (error) {
+                console.log("There was an error");
+            });
+
         console.log(this.state.value);
         event.preventDefault();
+
     }
 
-    // let _location = null;
-
-    // function handleNewProfileFormSubmission(event) {
-    //     event.preventDefault();
-    //     props.onNewProfileTagsCreation({ location: _location.value,});
-    //     _location.value = '';
-    // }
     render() {
         return (
-            <div>
+            <div class="showDogs">
                 <h2>Lifestyle/Personality Profile</h2>
                 <br></br>
                 <h4>Select the traits that best match you</h4>
