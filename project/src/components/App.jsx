@@ -23,7 +23,6 @@ class App extends React.Component {
           <Route path="/createaccount" component={CreateAccount} />
           <Route component={Error404} />
         </Switch>
-        <loginModal/>
         <APICall />
         <Footer />
       </div>
