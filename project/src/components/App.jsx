@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import APICall from './apiCall';
+import DescriptionPage from './DescriptionPage';
 import loginModal from './Login'
 import ShelterDog from './ShelterDog';
 import { Switch, Route } from 'react-router-dom';
@@ -16,7 +17,8 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <Switch>
-          <Route exact path='/' component={ShelterDog} />
+          <Route exact path='/' component={DescriptionPage} />
+          <Route exact path='/shelterdogs' component={ShelterDog} />
           <Route path="/profileform" component={ProfileForm} />
           <Route path="/createaccount" component={CreateAccount} />
           <Route component={Error404} />

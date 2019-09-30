@@ -4,9 +4,8 @@ import '../assets/styles/Header.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import placeholderLogo from '../assets/images/placeholderLogo.png';
 import {
-    Navbar, NavbarBrand, Nav, NavItem, NavLink, NavbarToggler,
-    Collapse, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem,
-    Button, Form, FormGroup, Label, Input, Container, Row, Col,
+    Navbar, NavbarBrand, Nav, NavItem, NavLink,
+    Button, Form, FormGroup, Input, Container, Row, Col,
     Modal, ModalHeader, ModalBody, ModalFooter
 } from 'reactstrap';
 
@@ -35,9 +34,9 @@ class Header extends React.Component {
                     <NavbarBrand href="/"><h3 class="headerName"><img class="headerLogo" src={placeholderLogo} alt="placeholder dog logo" />
                         Placeholder Name</h3></NavbarBrand>
                         <Nav className="ml-auto" navbar>
-                            <NavItem>
-                                <p><NavLink href="/#/profileform">Profile</NavLink></p>
-                            </NavItem>
+                            <Button color="primary">
+                               <NavLink href="/#/profileform">Profile</NavLink>
+                            </Button>
                         <Button color="primary" onClick={this.toggle}>Login{this.props.buttonLabel}</Button>
                         <div class="loginModal">
                         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
@@ -54,7 +53,7 @@ class Header extends React.Component {
                                                     <FormGroup style={{ fontSize: '12px', leftMargin: '150px', alignContent: 'center', alignItems: 'center' }} >
 
 
-                                    <Input type="email" name="email" id="Email" placeholder="Email" />
+                                    <Input type="email" name="email" id="Email" placeholder="Email" required/>
 
                                 </FormGroup>
                                 
@@ -63,7 +62,7 @@ class Header extends React.Component {
                                                     <FormGroup style={{ fontSize: '12px', leftMargin: '150px', alignContent: 'center', alignItems: 'center' }} >
 
 
-                                    <Input type="password" name="password" id="Password" placeholder="Password" />
+                                    <Input type="password" name="password" id="Password" placeholder="Password" re/>
 
                                 </FormGroup>
                                 </div>

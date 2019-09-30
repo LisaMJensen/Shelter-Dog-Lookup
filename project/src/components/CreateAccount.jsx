@@ -13,13 +13,13 @@ function CreateAccount(props) {
             <FormGroup row>
             <Col md={10}>
                 {/* <Label for="exampleEmail">Email</Label> */}
-                <Input size={50} type="email" name="email" id="exampleEmail" placeholder="Email" />
+                        <Input size={50} type="email" name="email" id="Email" placeholder="Email" required />
                 </Col>
             </FormGroup>
             <FormGroup row>
                 <Col md={10}>
                 {/* <Label for="examplePassword">Password</Label> */}
-                <Input type="password" name="password" id="examplePassword" placeholder="Password" />
+                        <Input type="password" name="password" id="Password" placeholder="Password" required/>
                 </Col>
             </FormGroup>
             <Button color="primary">Create Account</Button>
