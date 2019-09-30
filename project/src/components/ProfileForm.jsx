@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Button } from 'reactstrap';
+import { appendFile } from 'fs';
 require('dotenv').config();
 
 class ProfileForm extends React.Component {
@@ -26,25 +27,24 @@ class ProfileForm extends React.Component {
 
         client.animal.search({ type: "Dog", breed: "poodle", location: this.state.location, status: "adoptable", limit: "10" })
             .then(function (response) {
-                for(let i=0; i<=response.data.animals.length; i++) {
+                for (let i = 0; i <= response.data.animals.length; i++) {
                     console.log(response.data.animals[i].name);
                     console.log(response.data.animals[i].breeds);
                     console.log(response.data.animals[i].age);
-                    console.log(response.data.animals[i].photos[0]);
+                    console.log(response.data.animals[i].photos[0].small);
                 }
             })
             .catch(function (error) {
                 console.log("There was an error");
             });
 
-        console.log(this.state.location);
         event.preventDefault();
 
     }
 
     render() {
         return (
-            <div class="showDogs">
+            <div>
                 <h2>Lifestyle/Personality Profile</h2>
                 <br></br>
                 <h4>Select the traits that best match you</h4>
@@ -87,10 +87,11 @@ class ProfileForm extends React.Component {
                     type="checkbox" />
                 <br></br>
                 <br></br> */}
+
                     <input
                         name="location"
                         type="text"
-                        placeholder='Area Code'
+                        placeholder='Zip/Postal Code'
                         value={this.state.location} onChange={this.handleChange} />
                     <br></br>
                     <br></br>
