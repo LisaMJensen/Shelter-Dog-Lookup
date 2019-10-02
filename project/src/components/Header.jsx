@@ -30,61 +30,61 @@ class Header extends React.Component {
         return (
             <div>
                 <Navbar color="primary" dark expand="md">
-                    <NavbarBrand href="/"><h3 class="headerName"><img class="headerLogo" src={placeholderLogo} alt="placeholder dog logo" />
+                    <NavbarBrand href="/"><h3 className="headerName"><img className="headerLogo" src={placeholderLogo} alt="placeholder dog logo" />
                         Placeholder Name</h3></NavbarBrand>
-                        <Nav className="ml-auto" navbar>
-                            <Button color="primary">
-                               <NavLink href="/#/profileform">Profile</NavLink>
-                            </Button>
+                    <Nav className="ml-auto" navbar>
+                        <Button color="primary">
+                            <NavLink href="/#/profileform">Profile</NavLink>
+                        </Button>
                         <Button color="primary" onClick={this.toggle}>Login{this.props.buttonLabel}</Button>
-                        <div class="loginModal">
-                        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+                        <div className="loginModal">
+                            <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                                 <ModalHeader toggle={this.toggle} close={closeBtn}></ModalHeader>
                                 <ModalBody toggle={this.toggle} close={closeBtn}>
                                     <h1 class="loginModalLabel">Login</h1>
                                     <br></br>
                                     <Form>
-                                
-                                <Container>
-                                <Col>
-                               
-                                                    <div class="loginModalForm">
+
+                                        <Container>
+                                            <Col>
+
+                                                <div className="loginModalForm">
                                                     <FormGroup style={{ fontSize: '12px', leftMargin: '150px', alignContent: 'center', alignItems: 'center' }} >
 
 
-                                    <Input type="email" name="email" id="Email" placeholder="Email" required/>
+                                                        <Input type="email" name="email" id="Email" placeholder="Email" required />
 
-                                </FormGroup>
-                                
-                                
-                                
+                                                    </FormGroup>
+
+
+
                                                     <FormGroup style={{ fontSize: '12px', leftMargin: '150px', alignContent: 'center', alignItems: 'center' }} >
 
 
-                                    <Input type="password" name="password" id="Password" placeholder="Password" re/>
+                                                        <Input type="password" name="password" id="Password" placeholder="Password" re />
 
-                                </FormGroup>
-                                </div>
-                                                
+                                                    </FormGroup>
+                                                </div>
+
                                             </Col>
                                         </Container>
-                                            <div class='loginModalButton'><Button color="primary" onClick={this.toggle}>Login</Button>{' '}</div>
-                            </Form>
-                            
-                        </ModalBody>
-                        <ModalFooter>
-                           
-                                    <Row style={{ fontSize: '12px'}}>
+                                        <div className='loginModalButton'><Button color="primary" onClick={this.toggle}>Login</Button>{' '}</div>
+                                    </Form>
+
+                                </ModalBody>
+                                <ModalFooter>
+
+                                    <Row style={{ fontSize: '12px' }}>
                                         Not a Member?<NavLink href="/#/createaccount">
                                             <br></br>
                                             <h6 onClick={this.toggle} className="createAccountLink"> Create an Account</h6></NavLink></Row>
-                        </ModalFooter>
-                        
-                    </Modal>
+                                </ModalFooter>
+
+                            </Modal>
                         </div>
-                              
-                        </Nav>
-                   
+
+                    </Nav>
+
                 </Navbar>
 
             </div>

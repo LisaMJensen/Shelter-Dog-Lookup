@@ -31,7 +31,7 @@ class ProfileForm extends React.Component {
                     console.log(response.data.animals[i].name);
                     console.log(response.data.animals[i].breeds);
                     console.log(response.data.animals[i].age);
-                    console.log(response.data.animals[i].photos[0].small);
+                    console.log(response.data.animals[i].photos[0]);
                 }
             })
             .catch(function (error) {
