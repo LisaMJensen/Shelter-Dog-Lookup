@@ -1,7 +1,7 @@
-import React from 'react';
-import ProfileForm from './ProfileForm';
-import PropTypes from 'prop-types';
-require('dotenv').config();
+// import React from 'react';
+// import ProfileForm from './ProfileForm';
+// import PropTypes from 'prop-types';
+// require('dotenv').config();
 
 // class APICall extends React.Component {
 //     constructor() {
