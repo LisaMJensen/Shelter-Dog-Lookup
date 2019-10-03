@@ -40,7 +40,7 @@ class Header extends React.Component {
                         <div className="loginModal">
                             <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                                 <ModalHeader toggle={this.toggle} close={closeBtn}></ModalHeader>
-                                <ModalBody toggle={this.toggle} close={closeBtn}>
+                                <ModalBody>
                                     <h1 className="loginModalLabel">Login</h1>
                                     <br></br>
                                     <Form>
@@ -61,7 +61,7 @@ class Header extends React.Component {
                                                     <FormGroup style={{ fontSize: '12px', leftMargin: '150px', alignContent: 'center', alignItems: 'center' }} >
 
 
-                                                        <Input type="password" name="password" id="Password" placeholder="Password" re />
+                                                        <Input type="password" name="password" id="Password" placeholder="Password"/>
 
                                                     </FormGroup>
                                                 </div>
