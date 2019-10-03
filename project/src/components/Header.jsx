@@ -3,7 +3,7 @@ import '../assets/styles/Header.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import placeholderLogo from '../assets/images/placeholderLogo.png';
 import {
-    Navbar, NavbarBrand, Nav, NavItem, NavLink,
+    Navbar, NavbarBrand, Nav, NavLink,
     Button, Form, FormGroup, Input, Container, Row, Col,
     Modal, ModalHeader, ModalBody, ModalFooter
 } from 'reactstrap';
@@ -41,7 +41,7 @@ class Header extends React.Component {
                             <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                                 <ModalHeader toggle={this.toggle} close={closeBtn}></ModalHeader>
                                 <ModalBody toggle={this.toggle} close={closeBtn}>
-                                    <h1 class="loginModalLabel">Login</h1>
+                                    <h1 className="loginModalLabel">Login</h1>
                                     <br></br>
                                     <Form>
 
@@ -68,7 +68,7 @@ class Header extends React.Component {
 
                                             </Col>
                                         </Container>
-                                        <div className='loginModalButton'><Button color="primary" onClick={this.toggle}>Login</Button>{' '}</div>
+                                        <div className='loginModalButton'><Button size="lg" color="primary" block onClick={this.toggle}>Login</Button>{' '}</div>
                                     </Form>
 
                                 </ModalBody>
