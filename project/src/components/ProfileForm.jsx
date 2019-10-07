@@ -13,29 +13,39 @@ class ProfileForm extends React.Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+
     }
 
     handleChange(event) {
         this.setState({ location: event.target.value });
     }
 
-    handleSubmit(event) {
+    // displayInfo(dogs){
+    //     this.setState({ dogs: dogs.push(response.data.animals[i])});
+    // }
+
+    handleSubmit(event, dogs) {
 
         const API_KEY = process.env.REACT_APP_API_KEY;
         const SECRET = process.env.REACT_APP_SECRET;
         var petfinder = require("@petfinder/petfinder-js");
         var client = new petfinder.Client({ apiKey: API_KEY, secret: SECRET });
+        var dogs = [];
 
         client.animal.search({ type: "Dog", breed: "poodle", location: this.state.location, status: "adoptable", limit: "10" })
             .then(function (response) {
                 for (let i = 0; i <= response.data.animals.length; i++) {
-                    
                     console.log(response.data.animals[i].name);
+
+                    dogs.push(response.data.animals[i]);
+                    
+                    console.log(dogs);
+                    
                     // console.log(response.data.animals[i].breeds);
                     // console.log(response.data.animals[i].age);
                     // console.log(response.data.animals[i].photos[0]);
-                    
                 }
+                
             })
             .catch(function (error) {
                 console.log("There was an error");
@@ -59,11 +69,13 @@ class ProfileForm extends React.Component {
                         name="location"
                         type="text"
                         placeholder='Zip/Postal Code'
+                        //add validation for 5 numerical characters
                         value={this.state.location} onChange={this.handleChange} />
                     <br></br>
                     <br></br>
                     <Button color="primary" type="submit" value="Submit">Set Tags</Button>
                 </form>
+                <div className='displayInfoDemo'></div>
             </div>
         );
 

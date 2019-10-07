@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 
 function ShelterDogList(props) {
     return (
-        <div>
-        </div>
-    )
+        <ShelterDog
+        breed=""
+        age=""
+        location=""/>
+    );
 }
 
 export default ShelterDogList;
