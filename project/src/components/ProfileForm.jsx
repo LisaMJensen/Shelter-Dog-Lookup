@@ -7,42 +7,24 @@ import { Button } from 'reactstrap';
 
 class ProfileForm extends React.Component {
 
-
-    handleProfileFormSubmission(event) {
-        
-        event.preventDefault();
-        const action = {
+    constructor(props) {
+        super(props);
+        this.state = {
             location: '',
-           
+            dogs: []
         };
-        
-}
 
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
 
+    }
 
-
-
-
-
-// {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             location: '',
-//         };
-
-//         this.handleChange = this.handleChange.bind(this);
-//         this.handleSubmit = this.handleSubmit.bind(this);
-
-//     }
-
-//     handleChange(event) {
-//         this.setState({ location: event.target.value });
-//     }
+    handleChange(event) {
+        this.setState({ location: event.target.value });
+    }
 
 
     handleSubmit(event, dogs) {
-        const { dispatch } = props;
         const API_KEY = process.env.REACT_APP_API_KEY;
         const SECRET = process.env.REACT_APP_SECRET;
         var petfinder = require("@petfinder/petfinder-js");
@@ -54,11 +36,16 @@ class ProfileForm extends React.Component {
                 for (let i = 0; i <= response.data.animals.length; i++) {
                     console.log(response.data.animals[i].name);
 
-                    dogs.push(response.data.animals[i]);
+                    // dogs.push(response.data.animals[i]);
                     
-                    console.log(dogs);
+                    // console.log(dogs);
                 }
                 
+            })
+            .then(res => res.json())
+            .then((data) => {
+                this.setState({ dogs: data })
+                console.log(dogs);
             })
             .catch(function (error) {
                 console.log("There was an error");
@@ -67,9 +54,8 @@ class ProfileForm extends React.Component {
         event.preventDefault();
 
     }
-}
 
-    
+    render(){ 
         return (
             <div>
                 <h2>Lifestyle/Personality Profile</h2>
@@ -92,7 +78,8 @@ class ProfileForm extends React.Component {
                 
             </div>
         );
-
+        }
+    }
 
         
 
