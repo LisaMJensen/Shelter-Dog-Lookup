@@ -5,19 +5,16 @@ import { Button } from 'reactstrap';
 
 // require('dotenv').config();
 
-function ProfileForm(props) {
-    let _location = null;
+class ProfileForm extends React.Component {
 
 
-    function handleProfileFormSubmission(event) {
-        const { dispatch } = props;
+    handleProfileFormSubmission(event) {
+        
         event.preventDefault();
         const action = {
-            location: _location.value,
+            location: '',
            
         };
-        dispatch(action);
-        _location.value = '';
         
 }
 
@@ -44,36 +41,33 @@ function ProfileForm(props) {
 //     }
 
 
-//     handleSubmit(event, dogs) {
+    handleSubmit(event, dogs) {
+        const { dispatch } = props;
+        const API_KEY = process.env.REACT_APP_API_KEY;
+        const SECRET = process.env.REACT_APP_SECRET;
+        var petfinder = require("@petfinder/petfinder-js");
+        var client = new petfinder.Client({ apiKey: API_KEY, secret: SECRET });
+        var dogs = [];
 
-//         const API_KEY = process.env.REACT_APP_API_KEY;
-//         const SECRET = process.env.REACT_APP_SECRET;
-//         var petfinder = require("@petfinder/petfinder-js");
-//         var client = new petfinder.Client({ apiKey: API_KEY, secret: SECRET });
-//         var dogs = [];
+        client.animal.search({ type: "Dog", breed: "poodle", location: this.state.location, status: "adoptable", limit: "10" })
+            .then(function (response) {
+                for (let i = 0; i <= response.data.animals.length; i++) {
+                    console.log(response.data.animals[i].name);
 
-//         client.animal.search({ type: "Dog", breed: "poodle", location: this.state.location, status: "adoptable", limit: "10" })
-//             .then(function (response) {
-//                 for (let i = 0; i <= response.data.animals.length; i++) {
-//                     console.log(response.data.animals[i].name);
-
-//                     dogs.push(response.data.animals[i]);
+                    dogs.push(response.data.animals[i]);
                     
-//                     console.log(dogs);
-                    
-//                     // console.log(response.data.animals[i].breeds);
-//                     // console.log(response.data.animals[i].age);
-//                     // console.log(response.data.animals[i].photos[0]);
-//                 }
+                    console.log(dogs);
+                }
                 
-//             })
-//             .catch(function (error) {
-//                 console.log("There was an error");
-//             });
+            })
+            .catch(function (error) {
+                console.log("There was an error");
+            });
 
-//         event.preventDefault();
+        event.preventDefault();
 
-//     }
+    }
+}
 
     
         return (
@@ -95,9 +89,10 @@ function ProfileForm(props) {
                     <br></br>
                     <Button color="primary" type="submit" value="Submit">Set Tags</Button>
                 </form>
-                <div className='displayInfoDemo'></div>
+                
             </div>
         );
+
 
         
 
@@ -106,4 +101,4 @@ ProfileForm.propTypes = {
     onNewProfileTagsCreation: PropTypes.func
 };
 
-export default connect()(ProfileForm);
+export default ProfileForm;
