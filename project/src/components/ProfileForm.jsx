@@ -20,9 +20,6 @@ class ProfileForm extends React.Component {
         this.setState({ location: event.target.value });
     }
 
-    // displayInfo(dogs){
-    //     this.setState({ dogs: dogs.push(response.data.animals[i])});
-    // }
 
     handleSubmit(event, dogs) {
 
