@@ -46,7 +46,7 @@ function ShelterDog(props) {
                                 <CardBody>
                                     <CardImg style={{ width: 'auto', height: '200px' }} src={placeholderDogImage3} alt="placeholder dog image" />
                                     <CardTitle style={{ backgroundColor: '#007bff', color: 'white', padding: '5px' }}><h3 class="dogName">Georgia</h3></CardTitle>
-                                    <CardSubtitle>{props.breed} - Dog Age</CardSubtitle>
+                                    <CardSubtitle>{props.breed} - {props.age}</CardSubtitle>
 
                                     -{props.location}
                                 </CardBody>

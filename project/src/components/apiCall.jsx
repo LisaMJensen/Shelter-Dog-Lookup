@@ -1,43 +1,47 @@
-// import React from 'react';
-// import ProfileForm from './ProfileForm';
-// import PropTypes from 'prop-types';
-// require('dotenv').config();
+import React from 'react';
+import ProfileForm from './ProfileForm';
+import PropTypes from 'prop-types';
+require('dotenv').config();
 
-// class APICall extends React.Component {
-//     constructor() {
-//         super();
-//         this.state = {
-//             dogs: [],
-//         };
-//     }
+function APICall (props){
+    // let _name = null;
+    // let _breed = null;
+    // let _shelterLocation = null;
 
-//     componentDidMount() {
-//         const API_KEY = process.env.REACT_APP_API_KEY;
-//         const SECRET = process.env.REACT_APP_SECRET;
-//         var petfinder = require("@petfinder/petfinder-js");
-//         var client = new petfinder.Client({ apiKey: API_KEY, secret: SECRET });
+        const API_KEY = process.env.REACT_APP_API_KEY;
+        const SECRET = process.env.REACT_APP_SECRET;
+        var petfinder = require("@petfinder/petfinder-js");
+        var client = new petfinder.Client({ apiKey: API_KEY, secret: SECRET });
+        var dogs = [];
 
-//         client.animal.search({ type: "Dog", breed: "terrier", location: "98198", status: "adoptable", limit: "40" })
-//             .then(function (response) {
-//                 console.log(response.data.animals[0].name);
-//                 console.log(response.data.animals[0].breeds);
-//                 console.log(response.data.animals[0].age);
-//             })
-//             .catch(function (error) {
-//                 console.log("There was an error");
-//             });
+        client.animal.search({ type: "Dog", breed: "poodle", location: _location.value, status: "adoptable", limit: "100" })
 
-//     }
-//     render() {
-//         return (
-//             <div>
-//                 {this.state.dogs}
-//             </div>
-//         )
-//     }
-// }
+            .then(function (response) {
+                dogs.push(response.data.animals);
+                console.log(dogs);
+                for (let i = 0; i <= response.data.animals.length; i++) {
+                    console.log(response.data.animals[i].name);
+                }
 
-// export default APICall;
+            })
+            .catch(function (error) {
+                console.log("There was an error");
+            });
+
+        event.preventDefault();
+
+    
+
+    
+        return (
+            <div>
+                {this.state.dogs}
+            </div>
+        )
+    }
+
+
+export default APICall;
 
 
 
