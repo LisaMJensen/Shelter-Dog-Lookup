@@ -12,9 +12,7 @@ function ProfileForm(props) {
     function handleSubmit(event) {
         event.preventDefault();
         // props.onNewProfileTagsCreation({ location: _location.value })
-        APICall();
         console.log(_location.value);
-        
     }
 
 

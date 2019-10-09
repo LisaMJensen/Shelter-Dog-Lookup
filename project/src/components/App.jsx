@@ -7,6 +7,7 @@ import { Switch, Route } from 'react-router-dom';
 import ProfileForm from './ProfileForm';
 import CreateAccount from './CreateAccount';
 import Error404 from './Error404';
+import APICall  from './apiCall';
 import './App.css';
 
 class App extends React.Component {
@@ -21,6 +22,7 @@ class App extends React.Component {
           <Route path="/createaccount" component={CreateAccount} />
           <Route component={Error404} />
         </Switch>
+        <APICall />
         <Footer />
       </div>
     );
