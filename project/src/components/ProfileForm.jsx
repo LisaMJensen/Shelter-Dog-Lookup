@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Button } from 'reactstrap';
 import { ShelterDog } from './ShelterDog';
+import { Container, Row, Col, Card, CardImg, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 require('dotenv').config();
 
 class ProfileForm extends React.Component {
@@ -19,14 +20,14 @@ class ProfileForm extends React.Component {
 
     }
 
-    renderShelterDogs = () => {
-        this.state.dogData.map((value) =>
+    // renderShelterDogs = () => {
+    //     this.state.dogData.map((value) =>
 
-            <h1>{value.name}</h1>
+    //         <h1>{value.name}</h1>
 
 
-        )
-    }
+    //     )
+    // }
 
     handleChange(event) {
         this.setState({ location: event.target.value });
@@ -42,24 +43,25 @@ class ProfileForm extends React.Component {
         var client = new petfinder.Client({ apiKey: API_KEY, secret: SECRET });
         var dogs = []
 
-        client.animal.search({ type: "Dog", breed: "poodle", location: this.state.location, status: "adoptable", limit: "10" })
+        client.animal.search({ type: "Dog", breed: "terrier", location: this.state.location, status: "adoptable", limit: "10" })
             .then(response => {
+                console.log(response.data.animals);
+                // for (let i = 0; i <= response.data.animals.length; i++) {
 
-                for (let i = 0; i <= response.data.animals.length; i++) {
-                    console.log(response.data.animals[i]);
 
-                    // dogs.push(response.data.animals[i]);
+                //     dogs.push(response.data.animals[i]);
 
-                    // console.log(dogs);
 
-                    console.log(response.data.animals[i].breeds);
-                    console.log(response.data.animals[i].age);
-                    console.log(response.data.animals[i].photos[0]);
-                }
-                this.setState = ({
+
+                //     console.log(response.data.animals[i].breeds);
+                //     console.log(response.data.animals[i].age);
+                //     console.log(response.data.animals[i].photos[0]);
+                // }
+
+                this.setState({
                     dogData: response.data.animals
                 });
-
+                console.log(this.state.dogData);
 
             })
             .catch(function (error) {
@@ -95,8 +97,13 @@ class ProfileForm extends React.Component {
                     <Button color="primary" type="submit" value="Submit">Set Tags</Button>
                 </form>
                 <div className='displayInfoDemo'>
-                    {this.renderShelterDogs()}
-                    <ShelterDog></ShelterDog>
+                    <Container>
+                        <Row>
+                            {this.state.dogData.map((value) =>
+                                <Col><ShelterDog name={value.name} breed={value.breeds.primary} age={value.age} gender={value.gender} photo={value.photos[0].medium}></ShelterDog></Col>
+                            )}
+                        </Row>
+                    </Container>
                 </div>
             </div>
 

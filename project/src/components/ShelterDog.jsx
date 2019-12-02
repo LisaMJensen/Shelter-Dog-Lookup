@@ -12,25 +12,34 @@ import { ProfileForm } from './ProfileForm';
 export class ShelterDog extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            dogData: [],
+        }
+
     }
+
+
     render() {
+
+
+
         return (
             <div>
                 <Container>
-                    <Row>
-                        <div class="dogCard">
-                            <Col sm={{ size: 'auto', offset: 1 }}>
-                                <Card top className="h-300">
-                                    <CardBody>
-                                        <CardImg style={{ width: 'auto', height: '200px' }} src={placeholderDogImage} alt="placeholder dog image" />
-                                        <CardTitle style={{ backgroundColor: '#007bff', color: 'white', padding: '5px' }}><h3 class="dogName">{this.props.name}</h3></CardTitle>
-                                        <CardSubtitle>{this.props.breed} - {this.props.age}</CardSubtitle>
-                                        -{this.props.location}
-                                    </CardBody>
-                                </Card>
-                            </Col>
-                        </div>
-                        {/* 
+
+                    <div class="dogCard">
+                        {/* <Col sm={{ size: 'auto', offset: 1 }}> */}
+                        <Card top className="h-300">
+                            <CardBody>
+                                <CardImg style={{ width: '200px', height: 'auto' }} src={this.props.photo} alt="placeholder dog image" />
+                                <CardTitle style={{ backgroundColor: '#007bff', color: 'white', padding: '5px' }}><h3 class="dogName">{this.props.name}</h3></CardTitle>
+                                <CardSubtitle>{this.props.breed}</CardSubtitle>
+                                {this.props.age}-{this.props.gender}
+                            </CardBody>
+                        </Card>
+                        {/* </Col> */}
+                    </div>
+                    {/* 
                     <div class="dogCard">
                         <Col sm={{ size: 'auto', offset: 1 }}>
                             <Card top className="h-300">
@@ -60,18 +69,20 @@ export class ShelterDog extends Component {
                     </div> */}
 
 
-                    </Row>
+
 
                 </Container>
+
             </div>
         )
     }
 }
 ShelterDog.propTypes = {
+    photo: PropTypes.string,
     name: PropTypes.string,
     breed: PropTypes.string,
     age: PropTypes.string,
-    location: PropTypes.string
+    gender: PropTypes.string
 };
 
 export default ShelterDog;
