@@ -57,6 +57,9 @@ class ProfileForm extends React.Component {
                     dogData: response.data.animals
                 });
                 console.log(this.state.dogData);
+                if (this.state.dogData.length === 0) {
+                    return alert("There were no results found in your area.");
+                }
 
             })
             .catch(function (error) {
@@ -75,26 +78,31 @@ class ProfileForm extends React.Component {
         return (
             <div>
                 <h2>Lifestyle/Personality Profile</h2>
-                <br></br>
+                <br />
                 <h4>Select the traits that best match you</h4>
-                <br></br>
-                <br></br>
+                <br />
+                <br />
                 <form onSubmit={this.handleSubmit}>
 
                     <input
+                        required
                         name="location"
                         type="text"
                         placeholder='Zip/Postal Code'
                         //add validation for 5 numerical characters
                         value={this.state.location} onChange={this.handleChange} />
-                    <select name="breed" onChange={this.handleChange} value={this.state.breed}>
+                    <br />
+                    <br />
+                    <select required name="breed" onChange={this.handleChange} value={this.state.breed}>
+                        <option disabled selected value="">Choose a Breed</option>
                         <option value="Akita">Akita</option>
+                        <option value="Dalmatian">Dalmatian</option>
                         <option value="Labrador Retriever">Labrador Retriever</option>
                         <option value="English Bulldog">English Bulldog</option>
                         <option value="Scottish Terrier">Scottish Terrier</option>
                     </select>
-                    <br></br>
-                    <br></br>
+                    <br />
+                    <br />
                     <Button color="primary" type="submit" value="Submit">Set Tags</Button>
                 </form>
                 <div className='displayInfoDemo'>
