@@ -11,6 +11,7 @@ class ProfileForm extends React.Component {
         super(props);
         this.state = {
             location: '',
+            breed: '',
             name: '',
             dogData: [],
         };
@@ -30,29 +31,23 @@ class ProfileForm extends React.Component {
     // }
 
     handleChange(event) {
-        this.setState({ location: event.target.value });
+        const value = event.target.value;
+        this.setState({ [event.target.name]: value });
 
     }
 
 
-    handleSubmit(event, dogs) {
+    handleSubmit(event) {
 
         const API_KEY = process.env.REACT_APP_API_KEY;
         const SECRET = process.env.REACT_APP_SECRET;
         var petfinder = require("@petfinder/petfinder-js");
         var client = new petfinder.Client({ apiKey: API_KEY, secret: SECRET });
-        var dogs = []
 
-        client.animal.search({ type: "Dog", breed: "terrier", location: this.state.location, status: "adoptable", limit: "10" })
+        client.animal.search({ type: "Dog", breed: this.state.breed, location: this.state.location, status: "adoptable", limit: "50" })
             .then(response => {
                 console.log(response.data.animals);
                 // for (let i = 0; i <= response.data.animals.length; i++) {
-
-
-                //     dogs.push(response.data.animals[i]);
-
-
-
                 //     console.log(response.data.animals[i].breeds);
                 //     console.log(response.data.animals[i].age);
                 //     console.log(response.data.animals[i].photos[0]);
@@ -92,6 +87,12 @@ class ProfileForm extends React.Component {
                         placeholder='Zip/Postal Code'
                         //add validation for 5 numerical characters
                         value={this.state.location} onChange={this.handleChange} />
+                    <select name="breed" onChange={this.handleChange} value={this.state.breed}>
+                        <option value="Akita">Akita</option>
+                        <option value="Labrador Retriever">Labrador Retriever</option>
+                        <option value="English Bulldog">English Bulldog</option>
+                        <option value="Scottish Terrier">Scottish Terrier</option>
+                    </select>
                     <br></br>
                     <br></br>
                     <Button color="primary" type="submit" value="Submit">Set Tags</Button>
