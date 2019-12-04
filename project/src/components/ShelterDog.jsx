@@ -1,9 +1,6 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import placeholderDogImage from '../assets/images/placeholderDogImage.jpeg';
-import placeholderDogImage2 from '../assets/images/placeholderDogImage2.jpg';
-import placeholderDogImage3 from '../assets/images/placeholderDogImage3.jpeg';
 import '../assets/styles/ShelterDog.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Container, Row, Col, Card, CardImg, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
@@ -28,7 +25,7 @@ export class ShelterDog extends Component {
                 <Container>
 
                     <div class="dogCard">
-                        <a href={this.props.link}><span className="cardLink"></span></a>
+                        <a href={this.props.link} target="_blank"><span className="cardLink"></span></a>
                         {/* <Col sm={{ size: 'auto', offset: 1 }}> */}
                         <Card top className="h-300">
                             <CardBody>
