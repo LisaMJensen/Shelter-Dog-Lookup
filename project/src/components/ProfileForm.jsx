@@ -109,7 +109,7 @@ class ProfileForm extends React.Component {
                     <Container>
                         <Row>
                             {this.state.dogData.map((value) =>
-                                <Col><ShelterDog name={value.name} breed={value.breeds.primary} age={value.age} gender={value.gender} photo={value.photos[0].medium}></ShelterDog></Col>
+                                <Col><ShelterDog link={value.url} name={value.name} breed={value.breeds.primary} age={value.age} gender={value.gender} photo={value.photos[0].medium}></ShelterDog></Col>
                             )}
                         </Row>
                     </Container>
