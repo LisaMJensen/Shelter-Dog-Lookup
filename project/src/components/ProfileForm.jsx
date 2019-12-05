@@ -11,11 +11,12 @@ class ProfileForm extends React.Component {
         super(props);
         this.state = {
             location: '',
+            distance: '',
             // breed: '',
             name: '',
-            good_with_children: true,
-            good_with_cats: true,
-            good_with_dogs: true,
+            good_with_children: null,
+            good_with_cats: null,
+            good_with_dogs: null,
             dogData: [],
         };
 
@@ -52,6 +53,7 @@ class ProfileForm extends React.Component {
             type: "Dog",
             // breed: this.state.breed,
             location: this.state.location,
+            distance: this.state.distance,
             good_with_children: this.state.good_with_children,
             good_with_cats: this.state.good_with_cats,
             good_with_dogs: this.state.good_with_dogs,
@@ -116,6 +118,15 @@ class ProfileForm extends React.Component {
                     </select>
                     <br />
                     <br /> */}
+                    <select required name="distance" onChange={this.handleChange} value={this.state.distance}>
+                        <option disabled selected value="">Please choose a search distance radius</option>
+                        <option value="10">10 miles</option>
+                        <option value="20">20 miles</option>
+                        <option value="30">30 miles</option>
+                        <option value="40">40 miles</option>
+                    </select>
+                    <br />
+                    <br />
                     <h5>Do you have children?</h5>
                     <input type="radio" id="yes" name="good_with_children" checked={this.state.good_with_children === 'true'}
                         onChange={this.handleChange} value="true"
