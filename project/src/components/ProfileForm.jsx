@@ -11,7 +11,7 @@ class ProfileForm extends React.Component {
         super(props);
         this.state = {
             location: '',
-            breed: '',
+            // breed: '',
             name: '',
             good_with_children: true,
             good_with_cats: true,
@@ -50,7 +50,7 @@ class ProfileForm extends React.Component {
 
         client.animal.search({
             type: "Dog",
-            breed: this.state.breed,
+            // breed: this.state.breed,
             location: this.state.location,
             good_with_children: this.state.good_with_children,
             good_with_cats: this.state.good_with_cats,
@@ -106,16 +106,16 @@ class ProfileForm extends React.Component {
                         value={this.state.location} onChange={this.handleChange} />
                     <br />
                     <br />
-                    <select required name="breed" onChange={this.handleChange} value={this.state.breed}>
+                    {/* <select required name="breed" onChange={this.handleChange} value={this.state.breed}>
                         <option disabled selected value="">Choose a Breed</option>
-                        <option value="Akita">Akita</option>
+                        <option value="American Staffordshire Terrier">American Staffordshire Terrier</option>
                         <option value="Dalmatian">Dalmatian</option>
                         <option value="Labrador Retriever">Labrador Retriever</option>
                         <option value="English Bulldog">English Bulldog</option>
                         <option value="Scottish Terrier">Scottish Terrier</option>
                     </select>
                     <br />
-                    <br />
+                    <br /> */}
                     <h5>Do you have children?</h5>
                     <input type="radio" id="yes" name="good_with_children" checked={this.state.good_with_children === 'true'}
                         onChange={this.handleChange} value="true"
