@@ -13,6 +13,9 @@ class ProfileForm extends React.Component {
             location: '',
             breed: '',
             name: '',
+            good_with_children: true,
+            good_with_cats: true,
+            good_with_dogs: true,
             dogData: [],
         };
 
@@ -37,6 +40,7 @@ class ProfileForm extends React.Component {
     }
 
 
+
     handleSubmit(event) {
 
         const API_KEY = process.env.REACT_APP_API_KEY;
@@ -44,7 +48,16 @@ class ProfileForm extends React.Component {
         var petfinder = require("@petfinder/petfinder-js");
         var client = new petfinder.Client({ apiKey: API_KEY, secret: SECRET });
 
-        client.animal.search({ type: "Dog", breed: this.state.breed, location: this.state.location, status: "adoptable", limit: "50" })
+        client.animal.search({
+            type: "Dog",
+            breed: this.state.breed,
+            location: this.state.location,
+            good_with_children: this.state.good_with_children,
+            good_with_cats: this.state.good_with_cats,
+            good_with_dogs: this.state.good_with_dogs,
+            status: "adoptable",
+            limit: "50"
+        })
             .then(response => {
                 console.log(response.data.animals);
                 // for (let i = 0; i <= response.data.animals.length; i++) {
@@ -101,6 +114,42 @@ class ProfileForm extends React.Component {
                         <option value="English Bulldog">English Bulldog</option>
                         <option value="Scottish Terrier">Scottish Terrier</option>
                     </select>
+                    <br />
+                    <br />
+                    <h5>Do you have children?</h5>
+                    <input type="radio" id="yes" name="good_with_children" checked={this.state.good_with_children === 'true'}
+                        onChange={this.handleChange} value="true"
+                    />
+                    <label for="huey">Yes</label>
+                    <br />
+                    <input type="radio" id="no" name="good_with_children" checked={this.state.good_with_children === 'false'}
+                        onChange={this.handleChange} value="false"
+                    />
+                    <label for="huey">No</label>
+                    <br />
+                    <br />
+                    <h5>Do you have cats?</h5>
+                    <input type="radio" id="yes" name="good_with_cats" checked={this.state.good_with_cats === 'true'}
+                        onChange={this.handleChange} value="true"
+                    />
+                    <label for="huey">Yes</label>
+                    <br />
+                    <input type="radio" id="no" name="good_with_cats" checked={this.state.good_with_cats === 'false'}
+                        onChange={this.handleChange} value="false"
+                    />
+                    <label for="huey">No</label>
+                    <br />
+                    <br />
+                    <h5>Do you have other dogs?</h5>
+                    <input type="radio" id="yes" name="good_with_dogs" checked={this.state.good_with_dogs === 'true'}
+                        onChange={this.handleChange} value="true"
+                    />
+                    <label for="huey">Yes</label>
+                    <br />
+                    <input type="radio" id="no" name="good_with_dogs" checked={this.state.good_with_dogs === 'false'}
+                        onChange={this.handleChange} value="false"
+                    />
+                    <label for="huey">No</label>
                     <br />
                     <br />
                     <Button color="primary" type="submit" value="Submit">Set Tags</Button>
