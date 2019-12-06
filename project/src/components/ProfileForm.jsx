@@ -131,39 +131,39 @@ class ProfileForm extends React.Component {
                     <input type="radio" id="yes" name="good_with_children" checked={this.state.good_with_children === 'true'}
                         onChange={this.handleChange} value="true"
                     />
-                    <label for="huey">Yes</label>
+                    <label for="childrenYes">Yes</label>
                     <br />
                     <input type="radio" id="no" name="good_with_children" checked={this.state.good_with_children === 'false'}
                         onChange={this.handleChange} value="false"
                     />
-                    <label for="huey">No</label>
+                    <label for="childrenNo">No</label>
                     <br />
                     <br />
                     <h5>Do you have cats?</h5>
                     <input type="radio" id="yes" name="good_with_cats" checked={this.state.good_with_cats === 'true'}
                         onChange={this.handleChange} value="true"
                     />
-                    <label for="huey">Yes</label>
+                    <label for="catYes">Yes</label>
                     <br />
                     <input type="radio" id="no" name="good_with_cats" checked={this.state.good_with_cats === 'false'}
                         onChange={this.handleChange} value="false"
                     />
-                    <label for="huey">No</label>
+                    <label for="catNo">No</label>
                     <br />
                     <br />
                     <h5>Do you have other dogs?</h5>
                     <input type="radio" id="yes" name="good_with_dogs" checked={this.state.good_with_dogs === 'true'}
                         onChange={this.handleChange} value="true"
                     />
-                    <label for="huey">Yes</label>
+                    <label for="dogYes">Yes</label>
                     <br />
                     <input type="radio" id="no" name="good_with_dogs" checked={this.state.good_with_dogs === 'false'}
                         onChange={this.handleChange} value="false"
                     />
-                    <label for="huey">No</label>
+                    <label for="dogNo">No</label>
                     <br />
                     <br />
-                    <Button color="primary" type="submit" value="Submit">Set Tags</Button>
+                    <Button color="primary" type="submit" value="Submit">See your matches!</Button>
                 </form>
                 <div className='displayInfoDemo'>
                     <Container>
