@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Button } from 'reactstrap';
 import { ShelterDog } from './ShelterDog';
+import  NoImage  from '../assets/images/NoImage.png';
 import { Container, Row, Col, Card, CardImg, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 require('dotenv').config();
 
@@ -86,10 +87,20 @@ class ProfileForm extends React.Component {
     }
 
 
+    removeNoPhotos = () => {
 
 
+    }
 
     render() {
+        // const dogDataCopy = this.state.dogData.slice();
+
+        // for (let i = 0; i < dogDataCopy.length; i++) {
+        //     if (dogDataCopy[i].photos === 0) {
+        //         dogDataCopy[i].splice();
+        //     } return dogDataCopy;
+        // }
+
         return (
             <div>
                 <h2>Lifestyle/Personality Profile</h2>
@@ -168,8 +179,12 @@ class ProfileForm extends React.Component {
                 <div className='displayInfoDemo'>
                     <Container>
                         <Row>
-                            {this.state.dogData.map((value) =>
-                                <Col><ShelterDog link={value.url} name={value.name} breed={value.breeds.primary} age={value.age} gender={value.gender} photo={value.photos[0].medium}></ShelterDog></Col>
+                            {this.state.dogData.map((value) => {
+                                if (value.photos[0] === undefined) {
+                                    return <Col><ShelterDog link={value.url} name={value.name} breed={value.breeds.primary} age={value.age} gender={value.gender} photo={NoImage}></ShelterDog></Col>
+                                } else return <Col><ShelterDog link={value.url} name={value.name} breed={value.breeds.primary} age={value.age} gender={value.gender} photo={value.photos[0].medium}></ShelterDog></Col>
+                            }
+
                             )}
                         </Row>
                     </Container>
