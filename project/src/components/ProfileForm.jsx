@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Button } from 'reactstrap';
 import { ShelterDog } from './ShelterDog';
-import  NoImage  from '../assets/images/NoImage.png';
+import NoImage from '../assets/images/NoImage.png';
 import { Container, Row, Col, Card, CardImg, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 require('dotenv').config();
 

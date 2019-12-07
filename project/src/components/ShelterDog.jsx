@@ -25,6 +25,7 @@ export class ShelterDog extends Component {
                 <Container>
 
                     <div class="dogCard">
+                        {/*Instead of url for link, make new call by dog's assigned ID to pull info for dog's profile page. ID will also be used for "saving" dogs to user lists*/}
                         <a href={this.props.link} target="_blank"><span className="cardLink"></span></a>
                         {/* <Col sm={{ size: 'auto', offset: 1 }}> */}
                         <Card top className="h-300">
