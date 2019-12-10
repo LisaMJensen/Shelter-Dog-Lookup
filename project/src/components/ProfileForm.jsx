@@ -26,14 +26,6 @@ class ProfileForm extends React.Component {
 
     }
 
-    // renderShelterDogs = () => {
-    //     this.state.dogData.map((value) =>
-
-    //         <h1>{value.name}</h1>
-
-
-    //     )
-    // }
 
     handleChange(event) {
         const value = event.target.value;
